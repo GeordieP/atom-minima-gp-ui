@@ -34,6 +34,7 @@ atom-dock {
   }
 }
 
+
 // General Tabs
 .tab-bar {
   background-color: @tab-bar-background-color;
@@ -54,6 +55,7 @@ atom-dock {
     &.active {
       color: @text-color-selected;
       background-color: @tab-background-color-active;
+      // background-color: #f00;
 
       &:hover .close-icon {
         color: @text-color-subtle;
@@ -72,7 +74,7 @@ atom-dock {
           top: 1px;
           margin-left: 5px;
           color: @text-color-selected;
-          content: "↩︎";
+          // content: "↩︎";
         }
       }
     }
@@ -115,5 +117,11 @@ atom-dock {
         visibility: hidden;
       }
     }
+
+    // we don't want a different background color for the tree view "PROJECT" label tab
+    &[data-type="TreeView"] {
+        background: transparent !important;
+    }
   }
 }
+
